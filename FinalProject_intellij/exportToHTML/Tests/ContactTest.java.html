@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>ContactTest.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #7a7e85;}
+.s4 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+ContactTest.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">Tests</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">Base</span><span class="s2">.</span><span class="s1">TestBase</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">Pages</span><span class="s2">.</span><span class="s1">ContactUs</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">org</span><span class="s2">.</span><span class="s1">testng</span><span class="s2">.</span><span class="s1">annotations</span><span class="s2">.</span><span class="s1">Test</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">ContactTest </span><span class="s0">extends </span><span class="s1">TestBase </span><span class="s2">{</span>
+    <span class="s1">ContactUs contactUs</span><span class="s2">;</span>
+<span class="s3">//    @Test</span>
+<span class="s3">//    public void ClickContactUs(){</span>
+<span class="s3">//        contactUs = new ContactUs(driver);</span>
+<span class="s3">//        contactUs.navigate();</span>
+<span class="s3">//        contactUs.ClickOnContactUs();</span>
+<span class="s3">//    }</span>
+    <span class="s1">@Test</span>
+    <span class="s0">public void </span><span class="s1">SumbitContactUs</span><span class="s2">(){</span>
+        <span class="s1">contactUs </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ContactUs</span><span class="s2">(</span><span class="s1">driver</span><span class="s2">);</span>
+        <span class="s1">contactUs</span><span class="s2">.</span><span class="s1">navigate</span><span class="s2">();</span>
+        <span class="s1">contactUs</span><span class="s2">.</span><span class="s1">ClickOnContactUs</span><span class="s2">();</span>
+        <span class="s1">contactUs</span><span class="s2">.</span><span class="s1">FillName</span><span class="s2">(</span><span class="s4">&quot;Abdulrahman&quot;</span><span class="s2">);</span>
+        <span class="s1">contactUs</span><span class="s2">.</span><span class="s1">FillEmail</span><span class="s2">(</span><span class="s4">&quot;SWTest@Depi.com&quot;</span><span class="s2">);</span>
+        <span class="s1">contactUs</span><span class="s2">.</span><span class="s1">FillSubject</span><span class="s2">(</span><span class="s4">&quot;Service&quot;</span><span class="s2">);</span>
+        <span class="s1">contactUs</span><span class="s2">.</span><span class="s1">FillMessage</span><span class="s2">(</span><span class="s4">&quot;ThanksForGoodService&quot;</span><span class="s2">);</span>
+        <span class="s1">contactUs</span><span class="s2">.</span><span class="s1">Sumbit</span><span class="s2">();</span>
+        <span class="s1">contactUs</span><span class="s2">.</span><span class="s1">ValidAlert</span><span class="s2">(</span><span class="s4">&quot;Press OK to proceed!&quot;</span><span class="s2">);</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
